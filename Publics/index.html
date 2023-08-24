@@ -1,0 +1,91 @@
+<!-- #Archivo index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda</title>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h1>Nequi</h1>
+        </div>
+        <div class="containerbotones">
+            <a href="./Pantallas.html"> <button id="btnPantalla" class="btns">Pantallas</button></a>
+            <a href="./Ticket.html"><button id="btnGeneraricket" class="btns">Generar Ticket</button></a>
+
+
+        </div>
+    </div>
+    <div class="containerb">
+        <div class="containerSearch">
+            <input type="number" placeholder="Escritorios" id="cajita">
+            <a href="./Escritorio.html"><button id="btnIngresar" class="btns">Ingresar</button></a>
+            
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./main.js"></script>
+    
+</body>
+
+
+<style>
+    body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+        height: 100vh;
+    }
+
+    * {
+        margin: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .container {
+
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        place-items: center;
+        background-color: rgb(66, 66, 255);
+        width: 100%;
+        height: 100%;
+        place-content: center;
+        /*   background-color: #3449ff; */
+    }
+
+    .containerb {
+
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        place-items: center;
+        width: 100%;
+        height: 100%;
+        place-content: center;
+    }
+
+    .containerSearch {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btns {
+        padding: 10px;
+        border-radius: 15px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btns:hover {
+        background-color: aquamarine;
+    }
+</style>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="ticket">Ticket: 0</h1>
+    </div>
+    <div class="container2">
+        <button id="Button"> Generar Ticket</button>
+        <a href="./index.html"><button id="batras">Volver a atras</button></a>
+    </div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="./Ticket.js"></script>
+
+</body>
+
+
+<script>
+    
+
+</script>
+
+<style>
+    body {
+        background-color: rgb(66, 66, 255);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        place-content: center;
+        align-items: center;
+        font-size: 70px;
+  
+    }
+
+    * {
+        margin: 0;
+    }
+    .container {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+       gap: 105px;
+        align-items: center;
+
+    }
+    .container2{
+        display: flex;
+        align-items: flex-end;
+        gap: 15px;
+    }
+    #Button{
+        border: 3px groove  black;
+        border-radius: 20px;
+        background-color: rgb(255, 255, 255);
+        padding: 25px;
+        width: 100px; 
+        height: 100px;
+       
+    }
+    #batras{
+        border: 3px groove  black;
+        border-radius: 20px;
+        background-color: rgb(255, 255, 255);
+        width: 100px;
+        padding: 25px;
+        height: 100px;
+        /* position: fixed;
+        top: 60% */
+    }
+    
+</style>
+
+</html>
