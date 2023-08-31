@@ -2,8 +2,9 @@
  */const socket = io();
 
 
-const txtNombre = document.querySelector('#cajita')
-const btnIngresar = document.querySelector('#btnIngresar');
+const numero = document.getElementById('cajita')
+const btnIngresar = document.getElementById('btnIngresar');
+
 
 /*  const btnDia = document.querySelector('#btnDia'); */
 
@@ -16,14 +17,13 @@ socket.on('disconnect', () => {
 });
 
 
-
-
-btnIngresar.addEventListener('click', () => {
-    const inputData = {
-        nombre: txtNombre.value
-    }
-    socket.emit('saludar', inputData);
+btnIngresar.addEventListener('click', function () {
+    socket.emit('enviarescritorio', {
+        escritorio: numero.value
+    })
 });
+
+
 
 /*  btnDia.addEventListener('click', () => {
  

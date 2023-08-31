@@ -8,8 +8,9 @@
 </head>
 
 <body>
-    <div>
-        <h1 id="Escritorio1"> Escritorio</h1>
+    <div class="container">
+       <span><h1 >Escritorio: <p id="Escritorio1"></p>
+    </h1> </span> 
 
         <p>Atendiendo a ...</p>
     </div>
@@ -21,6 +22,24 @@
 <style>
     *{
         margin: 0;
+    }
+    body{
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .container{
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(66, 66, 255);
+        border-radius: 15px;
+        color: white;
     }
 </style>
 <script>

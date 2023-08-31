@@ -1,13 +1,15 @@
-/* Contenido de archivo socket.js */
-const controllerSockets = (socket) => {
-    console.log(socket.id);
+import { Server as SocketServer } from 'socket.io';
+import * as io from 'socket.io'; // Importa la clase Server
 
-    socket.on('saludar', async (inputData) => {
-        console.log(`hola ${inputData.nombre}`);
-        socket.emit('valorInput', inputData.nombre);
-        // Emitir el valor a todos los clientes
-    });   
-    
-    
+const controllerSockets = (socket, ioServer) => {
+    console.log(socket.id);
+    socket.on('nticket', (numero) => {
+        console.log(numero)
+    })
+    socket.on('enviarescritorio', (data) => {
+         
+      socket.broadcast.emit('enviar', data);// Aquí es donde estás teniendo un problema
+    })
 }
-export default controllerSockets
+
+export default controllerSockets;

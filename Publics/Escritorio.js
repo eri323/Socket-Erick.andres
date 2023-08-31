@@ -11,10 +11,13 @@ socket.on('disconnect', () => {
     console.log('Desconectado del servidor');
 });
 
-socket.on('valorInput', (valor) => {
-    escritorio1.textContent = `Valor recibido: ${valor}`;
+socket.on('enviar', (data) => {
+    console.log("data", data)
+    escritorio1.textContent = data
 });
 
-socket.on('valorInput', (valor) => {
+
+/* socket.on('valorInput', (valor) => {
     console.log(`Valor recibido: ${valor}`);
 });
+ */
