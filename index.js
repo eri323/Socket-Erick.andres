@@ -21,8 +21,10 @@ app.set('socketio', io)
 
 ioServer.on('connection', (socket) => {
     console.log('Nuevo cliente conectado:', socket.id);
-    controllerSockets(socket, ioServer); // Pasa ioServer como parámetro
+    controllerSockets(socket); // Pasa ioServer como parámetro
 });
+
+
 
 server.listen(port, () => {
     console.log(`Servidor corriendo en el puerto ${port}`);

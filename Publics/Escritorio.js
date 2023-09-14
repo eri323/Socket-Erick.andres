@@ -1,23 +1,19 @@
-/* Script de archivo Escritorio.html */
-const socket = io();
+const socket = io(); // Conéctate al servidor
 
-const escritorio1 = document.querySelector("#Escritorio1")
-
-socket.on('connect', () => {
-    console.log("hola");
-});
-
-socket.on('disconnect', () => {
-    console.log('Desconectado del servidor');
-});
-
-socket.on('enviar', (data) => {
-    console.log("data", data)
-    escritorio1.textContent = data
+socket.on('ticketNumber', (mensaje) => {
+    console.log('Número de ticket recibido:', mensaje);
+    // Hacer algo con el número de ticket, por ejemplo, mostrarlo en la interfaz
+    document.getElementById('Tickets').textContent =  mensaje;
 });
 
 
-/* socket.on('valorInput', (valor) => {
-    console.log(`Valor recibido: ${valor}`);
-});
- */
+document.addEventListener('DOMContentLoaded', () => {
+            const numeroEscritorioElement = document.getElementById('Escritorio1');
+            const urlParams = new URLSearchParams(window.location.search);
+            const numeroEscritorio = urlParams.get('escritorio');
+
+            if (numeroEscritorio !== null) {
+                numeroEscritorioElement.textContent = `${numeroEscritorio}`;
+            }
+        });
+

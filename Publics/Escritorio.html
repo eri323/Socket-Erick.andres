@@ -9,30 +9,46 @@
 
 <body>
     <div class="container">
-       <span><h1 >Escritorio: <p id="Escritorio1"></p>
-    </h1> </span> 
+        <div class="ContainerInt">
+            <span>
+                <h1 style="display: flex;">Escritorio: <p id="Escritorio1"></p>
+                </h1>
+            </span>
 
-        <p>Atendiendo a ...</p>
+            <p id="Escritorio2"></p>
+
+
+            <p>Atendiendo a ...</p>
+        </div>
+        <div class="TicketsPendientes">
+            <h1>Tickets</h1>
+            <h5 id="Tickets"></h5>
+        </div>
     </div>
-<script src="/socket.io/socket.io.js"></script>
-<script src="./Escritorio.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./Escritorio.js"></script>
 </body>
 
 
 <style>
-    *{
+    * {
         margin: 0;
     }
-    body{
+
+    body {
         display: flex;
         height: 100vh;
         justify-content: center;
         align-items: center;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
-
     .container{
-        padding: 15px;
+        display: flex;
+        gap: 45px;
+        justify-content: space-around;
+    }
+    .ContainerInt {
+        padding: 120px;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -40,6 +56,18 @@
         background-color: rgb(66, 66, 255);
         border-radius: 15px;
         color: white;
+        font-size: 40px;
+    }
+    .TicketsPendientes{
+        padding: 120px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(66, 66, 255);
+        border-radius: 15px;
+        color: white;
+        font-size: 40px;
     }
 </style>
 <script>
