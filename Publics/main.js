@@ -21,7 +21,6 @@ socket.on('saluden', (data) => {
 
 });
 
-
 btnTicket.addEventListener('click', () => {
     window.open('Ticket.html', '_blank');
     socket.on('entrando a ticket', (data) => {
@@ -30,7 +29,7 @@ btnTicket.addEventListener('click', () => {
 });
 
 btnPantalla.addEventListener('click', () => {
-    window.open('Esscritorio.html', '_blank');
+    window.open('Pantallas.html', '_blank');
 });
 
 

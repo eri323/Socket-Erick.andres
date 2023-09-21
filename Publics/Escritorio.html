@@ -18,11 +18,12 @@
             <p id="Escritorio2"></p>
 
 
-            <p>Atendiendo a ...</p>
+            <p id="Atendiendo"></p>
         </div>
         <div class="TicketsPendientes">
             <h1>Tickets</h1>
-            <h5 id="Tickets"></h5>
+            <h5 id="TicketRecibido"></h5>
+            <button id="BotonTicket" class="btn">Atender Ticket</button>
         </div>
     </div>
     <script src="/socket.io/socket.io.js"></script>
@@ -46,6 +47,7 @@
         display: flex;
         gap: 45px;
         justify-content: space-around;
+        flex-wrap: wrap;
     }
     .ContainerInt {
         padding: 120px;
@@ -68,6 +70,17 @@
         border-radius: 15px;
         color: white;
         font-size: 40px;
+    }
+    .btn {
+        padding: 10px;
+        border-radius: 15px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: aquamarine;
+        transition: 0.5s ease-in-out;
     }
 </style>
 <script>
