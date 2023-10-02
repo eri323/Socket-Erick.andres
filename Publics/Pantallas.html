@@ -1,44 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pantallas</title>
 </head>
+
 <body>
 
     <div class="containerPantallas">
         <div class="PantallaPrincipal">
-            <div class="pantalla" id="pantalla1">
-                <h4>Escritorio: </h4>
-                <p>Atendiendo: </p>
+            <div class="pantalla" >
+                <h4 id="pantalla1">Escritorio</h4>
+                <p id="ticket1">Atendiendo: </p>
             </div>
         </div>
         <div class="RestoPantallas">
-            <div class="pantalla" id="pantalla1">Pantalla 2</div>
-            <div class="pantalla" id="pantalla2">Pantalla 3</div>
-            <div class="pantalla" id="pantalla3">Pantalla 4</div>
-            <div class="pantalla" id="pantalla4">Pantalla 5</div>
+           <!--  <div class="pantalla">
+                <h4 id="pantalla1">Escritorio:</h4>
+                <h4 id="ticket1"></h4>
+            </div> -->
+            <div class="pantalla">
+                <h4 id="pantalla2">Escritorio</h4>
+                <h4 id="ticket2"></h4>
+            </div>
+            <div class="pantalla">
+                <h4 id="pantalla3">Escritorio</h4>
+                <h4 id="ticket3"></h4>
+            </div>
+            <div class="pantalla">
+                <h4 id="pantalla4">Escritorio</h4>
+                <h4 id="ticket4"></h4>
+            </div>
         </div>
     </div>
-   
+
     <script src="/socket.io/socket.io.js"></script>
     <script src="./Pantallas.js"></script>
 </body>
 
 <style>
-    *{
+    * {
         margin: 0;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
-    body{
+
+    body {
         background-color: rgb(66, 66, 255);
         display: flex;
-        align-items: center;   
+        align-items: center;
         justify-content: center;
         padding: 25px 0px;
     }
-    .containerPantallas{
+
+    .containerPantallas {
         width: 90%;
         padding: 20px;
         background-color: white;
@@ -49,19 +65,21 @@
         flex-wrap: wrap;
         justify-content: space-around;
     }
-    .pantalla{
+
+    .pantalla {
         background-color: rgb(66, 66, 255);
         padding: 80px;
         border-radius: 10px;
         font-size: 30px;
         color: white;
     }
-    .RestoPantallas{
+
+    .RestoPantallas {
         display: flex;
         gap: 10px;
         flex-wrap: wrap;
         justify-content: center;
     }
-
 </style>
+
 </html>

@@ -1,5 +1,5 @@
-import { Server as SocketServer } from 'socket.io';
-import * as io from 'socket.io'; // Importa la clase Server
+// import { Server as SocketServer } from 'socket.io';
+// import * as io from 'socket.io'; // Importa la clase Server
 
 
 const controllerSockets = (socket) => {
@@ -7,6 +7,7 @@ const controllerSockets = (socket) => {
 
 
 const TicketsCreados = []
+/* const TicketsAtendidos = [] */
 
 socket.on('ticketAssigned', (mensaje) => {
   TicketsCreados.push(mensaje);
@@ -21,6 +22,21 @@ socket.on('ticketAssigned', (mensaje) => {
      socket.broadcast.emit('ticketNumber', TicketsCreados);
   });
   
+
+/*   socket.on('numeroEscritorio', (numeroEscritorio )=>{
+    EscritoriosCreados.push(numeroEscritorio);
+    socket.broadcast.emit('numeroEscri', EscritoriosCreados);
+  }) */
+
+
+
+  socket.on('datoPantalla', (NumEscritorio)=>{
+    socket.broadcast.emit('datoPan',NumEscritorio)
+  })
+
+  socket.on('datoPantallaTicket', (ticketAtendido) => {
+    socket.broadcast.emit('datoPanTi', ticketAtendido)
+  })
 }
 
 

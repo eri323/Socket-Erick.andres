@@ -46,6 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (numeroEscritorio > 0 && !isNaN(numeroEscritorio) && !escritorios.has(numeroEscritorio)) {
             escritorios.add(numeroEscritorio);
 
+/*             socket.emit('numeroEscritorio', numeroEscritorio);
+            console.log(numeroEscritorio); */
+
+
             // Agregar el número de escritorio como parámetro en la URL de la página "Escritorio"
             window.open(`Escritorio.html?escritorio=${numeroEscritorio}`, '_blank');
             console.log(escritorios)

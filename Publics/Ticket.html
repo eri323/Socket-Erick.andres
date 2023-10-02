@@ -12,8 +12,8 @@
         <h1 id="ticket">Ticket: 0</h1>
     </div>
     <div class="container2">
-        <button id="GenerarT"> Generar Ticket</button>
-        <a href="./index.html"><button id="batras">Volver a atras</button></a>
+        <button id="GenerarT" class="btns"> Generar Ticket</button>
+        <!-- <a href="./index.html"><button id="batras" class="btns">Volver a atras</button></a> -->
     </div>
 <script src="/socket.io/socket.io.js"></script>
 <script src="./Ticket.js"></script>
@@ -55,24 +55,17 @@
         align-items: flex-end;
         gap: 15px;
     }
-    #GenerarT{
-        border: 3px groove  black;
-        border-radius: 20px;
-        background-color: rgb(255, 255, 255);
-        padding: 25px;
-        width: 100px; 
-        height: 100px;
-       
+   
+     .btns {
+        padding: 10px;
+        border-radius: 15px;
+        border: none;
+        cursor: pointer;
     }
-    #batras{
-        border: 3px groove  black;
-        border-radius: 20px;
-        background-color: rgb(255, 255, 255);
-        width: 100px;
-        padding: 25px;
-        height: 100px;
-        /* position: fixed;
-        top: 60% */
+
+    .btns:hover {
+        background-color: aquamarine;
+        transition: 0.5s ease-in-out;
     }
     
 </style>
